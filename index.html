@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body class="text-bg-dark">
+
+    <div class="container-fluid">
+      <!-- Header -->
+      <h1 class="mb-5 p-2">Rock Paper Scissors</h1>
+
+      <!-- Moves -->
+      <section class="d-flex gap-5 px-3 mb-5">
+        <button type="button" class="btn rounded-circle border border-light border-5"
+                style="width: 150px; height: 150px;" onclick="playGame('rock')">
+          <i class="fa-solid fa-hand-fist fa-4x text-primary"></i>
+        </button>
+        <button type="button" class="btn rounded-circle border border-light border-5"
+                style="width: 150px; height: 150px;" onclick="playGame('paper')">
+          <i class="fa-solid fa-hand fa-4x text-primary"></i>
+        </button>
+        <button type="button" class="btn rounded-circle border border-light border-5"
+                style="width: 150px; height: 150px;" onclick="playGame('scissors')">
+          <i class="fa-solid fa-hand-peace fa-4x text-primary"></i>
+        </button>
+      </section>
+
+      <!-- Move Report -->
+      <section class="report d-none mb-5">
+        <h2 class="mb-5 result">You win.</h2>
+        <p>
+          You <span class="you-move mx-2 text-primary fa-2x"><i class="fa-solid fa-hand-fist"></i></span>
+          <span class="computer-move mx-2 text-primary fa-2x"><i class="fa-solid fa-hand-fist"></i></span> Computer
+        </p>
+      </section>
+
+      <!-- Summary -->
+      <section class="summary mb-3">
+        Wins: 0, Losses: 0, Ties: 0
+      </section>
+
+      <button type="button" class="btn btn-light rounded-0" onclick="resetGame()">Reset Score</button>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
